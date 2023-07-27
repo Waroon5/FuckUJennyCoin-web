@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FUJ Token</title>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #fff; /* White background */
+            color: black; /* Black text */
+            line-height: 1.6; /* Text line height */
+        }
+
+        header {
+            background-color: #000; /* Black menu bar */
+            padding: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo {
+            width: 45px;
+            height: 45px;
+        }
+
+        h1 {
+            font-family: 'Pacifico', cursive; /* Use Pacifico font */
+            color: #000; /* Black text */
+            text-align: center;
+            font-size: 36px; /* Set title font size */
+        }
+
+        .about-tokenomics-twitter {
+            background-color: #fff; /* White background */
+            padding: 20px;
+            text-align: center;
+        }
+
+        .about-tokenomics-twitter h2 {
+            font-family: 'Pacifico', cursive; /* Use Pacifico font */
+            color: #000; /* Black text */
+            font-size: 28px; /* Set sub-title font size */
+        }
+
+        .about-tokenomics-twitter p {
+            text-align: center;
+        }
+
+        .tokenomics {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .tokenomics img {
+            width: 300px;
+            margin: 20px 0;
+        }
+
+        footer {
+            background-color: #000; /* Black menu bar */
+            color: #fff;
+            text-align: center;
+            padding: 10px;
+            margin-top: 20px;
+        }
+
+        .twitter-icon {
+            width: 30px;
+            margin-right: 5px;
+        }
+
+        .twitter-link {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        /* Floating Animation for DVD Logo */
+        @keyframes floatAnimation {
+            0% { transform: translateY(0) translateX(0); }
+            25% { transform: translateY(-10px) translateX(10px); }
+            50% { transform: translateY(0) translateX(0); }
+            75% { transform: translateY(10px) translateX(-10px); }
+            100% { transform: translateY(0) translateX(0); }
+        }
+
+        .dvd-logo {
+            position: absolute;
+            width: 100px; /* Set image width */
+            animation: floatAnimation 4s infinite;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <img class="logo" src="logo.png" alt="FUJ Logo">
+    </header>
+
+    <main>
+        <section class="about-tokenomics-twitter">
+            <h1>About FUJ</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam tincidunt vehicula felis, nec consequat quam malesuada id. Fusce eleifend, justo nec auctor dictum, nisi justo gravida eros, id sollicitudin velit nibh at ex.</p>
+            <div class="tokenomics">
+                <h2>Tokenomics</h2>
+                <p>CA: 0xadba03f5ec532186dfdff693a0200fc499ec7034</p>
+                <p>Tax buy | sell - 1%</p>
+                <p>Holder owns 5%</p>
+                <p>Contract is Renounced</p>
+                <img class="floating-image" src="fuj.jpg" alt="FUJ Token">
+            </div>
+        </section>
+    </main>
+
+    <!-- DVD Logo Image -->
+    <img class="dvd-logo" src="dvd_logo.png" alt="DVD Logo">
+
+    <footer>
+        <a class="twitter-link" href="https://twitter.com/your_twitter_handle" target="_blank">
+            <img class="twitter-icon" src="twitter_icon.png" alt="Twitter Icon">
+            Follow us on Twitter
+        </a>
+    </footer>
+
+    <script>
+        // JavaScript code (optional) to control the floating animation of the DVD logo
+        const logo = document.querySelector('.dvd-logo');
+
+        let x = 0; // Initial x-coordinate
+        let y = 0; // Initial y-coordinate
+        let xSpeed = 3; // x-axis speed
+        let ySpeed = 3; // y-axis speed
+
+        function moveLogo() {
+            const maxX = window.innerWidth - logo.width;
+            const maxY = window.innerHeight - logo.height;
+
+            x += xSpeed;
+            y += ySpeed;
+
+            if (x > maxX || x < 0) {
+                xSpeed = -xSpeed;
+            }
+
+            if (y > maxY || y < 0) {
+                ySpeed = -ySpeed;
+            }
+
+            logo.style.left = x + 'px';
+            logo.style.top = y + 'px';
+
+            requestAnimationFrame(moveLogo);
+        }
+
+        moveLogo();
+    </script>
+</body>
+
+</html>
