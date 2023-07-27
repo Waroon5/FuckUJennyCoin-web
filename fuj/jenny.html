@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FUJ Token</title>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #fff; /* White background */
+            color: black; /* Black text */
+            line-height: 1.6; /* Text line height */
+        }
+
+        header {
+            background-color: #000; /* Black menu bar */
+            padding: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo {
+            width: 45px;
+            height: 45px;
+        }
+
+        h1 {
+            font-family: 'Pacifico', cursive; /* Use Pacifico font */
+            color: #000; /* Black text */
+            text-align: center;
+            font-size: 36px; /* Set title font size */
+        }
+
+        .about-tokenomics-twitter {
+            background-color: #fff; /* White background */
+            padding: 20px;
+            text-align: center;
+        }
+
+        .about-tokenomics-twitter h2 {
+            font-family: 'Pacifico', cursive; /* Use Pacifico font */
+            color: #000; /* Black text */
+            font-size: 28px; /* Set sub-title font size */
+        }
+
+        .about-tokenomics-twitter p {
+            text-align: center;
+        }
+
+        .tokenomics {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .tokenomics img {
+            width: 300px;
+            margin: 20px 0;
+        }
+
+        footer {
+            background-color: #000; /* Black menu bar */
+            color: #fff;
+            text-align: center;
+            padding: 10px;
+            margin-top: 20px;
+        }
+
+        .twitter-icon {
+            width: 30px;
+            margin-right: 5px;
+        }
+
+        .twitter-link {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        /* Floating Animation for DVD Logo */
+        @keyframes floatAnimation {
+            0% { transform: translateY(0) translateX(0); }
+            25% { transform: translateY(-10px) translateX(10px); }
+            50% { transform: translateY(0) translateX(0); }
+            75% { transform: translateY(10px) translateX(-10px); }
+            100% { transform: translateY(0) translateX(0); }
+        }
+
+        .dvd-logo {
+            position: absolute;
+            width: 100px; /* Set image width */
+            animation: floatAnimation 4s infinite;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <img class="logo" src="LOGO.jpg" alt="FUJ Logo">
+    </header>
+
+    <main>
+        <section class="about-tokenomics-twitter">
+            <h1>About FUJ</h1>
+            <p>Yesterday, I was all pumped to hit the bars with my buddies and have a few drinks. But let me tell ya, Jenny went ballistic on me, giving me an earful like you wouldn't believe! She's all like, "You never make any damn money, and all you do is hang out with your buddies!" I've had it, man. I'm sick and tired of being under her thumb.
+
+                So, I heard you guys in the blockchain biz are raking in the dough, and I thought, why the heck not? I'm gonna create my own meme coin using ChatGPT! Every single transaction's gonna have a 1% tax, and guess where that dough's going? Straight to Jenny's wallet! Yeah, that's right. Gotta prove to her that I'm hustling hard every day. She ain't got a clue about blockchain, so as long as she sees some money rolling in, she's good with it. Oh, and by the way, I even helped her set up that wallet.
+                
+                But here's the kicker - I'm gonna slyly stash away 5% for myself, just for some smooth times and drinks with my buddies. And the rest, a whopping 95%, is gonna dive right into the liquidity pool for you folks to play around with. Truth is, I'm still kinda green in this blockchain game. But I got this code all whipped up using ChatGPT, and from what I've learned so far, blockchain's gotta work for the regular folks, not just big companies. That's why I'm calling this move "IFO" - Initial Family Offering. And oh, don't forget the token's name - FUJ! It stands for "FUCK U Jenny" - haha, my wife's name! So when she asked what FUJ meant, I just played it cool and said "For U Jenny." Gotta make sure she never finds out the real deal, 'cause she'd probably do me in!
+                
+                Oh, and listen up - this contract's got a blacklist function, just so you know. I straight up don't want no bots making bank off my drinking money! So if you're really bothered by that, you might wanna think twice about buying in. - Angry John</p>
+            <div class="tokenomics">
+                <h2>Tokenomics</h2>
+                <p>CA: 0xadba03f5ec532186dfdff693a0200fc499ec7034</p>
+                <p>Tax buy | sell - 1%</p>
+                <p>Holder owns 5%</p>
+                <p>Contract is Renounced</p>
+                <img class="floating-image" src="fuj.jpg" alt="FUJ Token">
+            </div>
+        </section>
+    </main>
+
+    <!-- DVD Logo Image -->
+    <img class="dvd-logo" src="LOGO.jpg" alt="DVD Logo">
+
+    <footer>
+        <a class="twitter-link" href="https://twitter.com/John198305" target="_blank">
+            <img class="twitter-icon" src="ICON.png" alt="Twitter Icon">
+            Follow me on Twitter
+        </a>
+    </footer>
+
+    <script>
+        // JavaScript code (optional) to control the floating animation of the DVD logo
+        const logo = document.querySelector('.dvd-logo');
+
+        let x = 0; // Initial x-coordinate
+        let y = 0; // Initial y-coordinate
+        let xSpeed = 3; // x-axis speed
+        let ySpeed = 3; // y-axis speed
+
+        function moveLogo() {
+            const maxX = window.innerWidth - logo.width;
+            const maxY = window.innerHeight - logo.height;
+
+            x += xSpeed;
+            y += ySpeed;
+
+            if (x > maxX || x < 0) {
+                xSpeed = -xSpeed;
+            }
+
+            if (y > maxY || y < 0) {
+                ySpeed = -ySpeed;
+            }
+
+            logo.style.left = x + 'px';
+            logo.style.top = y + 'px';
+
+            requestAnimationFrame(moveLogo);
+        }
+
+        moveLogo();
+    </script>
+</body>
+
+</html>
